@@ -1,0 +1,341 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="NewsDataScraping" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="703,3815" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="AUTOMATED PROCESS INFOMARTION:&#xA;&#xA;- Process title: NewsDataScraping&#xA;&#xA;- Process description: Essa automação envolve a extração e manipulação de dados textuais do site https://news.yahoo.com. As etapas incluem acessar o site, extrair informações como títulos, resumos, tempo de leitura, tema e fonte das cinco notícias mais relevantes na seção &quot;Stories for you&quot;. Por fim, os dados são salvos em um arquivo do Excel.&#xA;&#xA;-------------------------------------------------------&#xA;ADDITIONAL INFORMATION:&#xA;&#xA;- Developers:&#xA;       •  Leticia Cruz (leticiacruzs@outlook.com.br)&#xA;&#xA;- Applications Used:&#xA;       • Google Chrome;&#xA;" DisplayName="NewsDataScraping" sap:VirtualizedContainerService.HintSize="713,3750" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="https://news.yahoo.com/" Name="urlYahooNews" />
+      <Variable x:TypeArguments="x:Int32" Default="5" Name="quantityNews" />
+      <Variable x:TypeArguments="x:String" Default="ReportNews.xlsx" Name="filePath" />
+      <Variable x:TypeArguments="x:String" Default="Planilha1" Name="sheetName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Nas configurações, foi definido que a página do Yahoo News sempre será aberta e fechada em uma guia anônima, seguindo as melhores práticas." AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Yahoo News" sap:VirtualizedContainerService.HintSize="651,3372" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="True" OpenMode="Always" ScopeGuid="3f147b01-43d6-4204-a556-b418ffee44df" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="617,3113" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="textStories" />
+              <Variable x:TypeArguments="s:String[]" Name="newsThemes" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dtYahooNews" />
+              <Variable x:TypeArguments="s:String[]" Name="textNewsComplet" />
+              <Variable x:TypeArguments="s:String[]" Name="textDescription" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check app state stories for you" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="555,422" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="3f147b01-43d6-4204-a556-b418ffee44df" Timeout="5" Version="V3">
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw DisplayName="Throw BRE - Stories for you not found" Exception="[New BusinessRuleException(&quot;A seção 'Stories for you' não foi carregada na tela&quot;)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://news.yahoo.com/" CvTextArea="42, 315, 112, 18" CvTextArgument="Stories for you" CvType="Text" DesignTimeRectangle="44, 313, 110, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Stories for you'" FullSelectorArgument="&lt;webctrl parentid='module-stream' tag='H2' aaname='Stories for you ' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='module-stream' tag='H2' aaname='Stories for you ' type='' class='Fw(600) Fz(16px) C(--batcave) M(0)' check:text='Stories for you' /&gt;" Guid="efbb6f21-c3a2-43c0-94ab-3ee86d03aa66" InformativeScreenshot="fd8856c69d6ae3b8e74e147499cf0eb4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*Yahoo News*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <ui:BuildDataTable sap2010:Annotation.AnnotationText="Colunas: Tema, Fonte, Titulo, Resumo e Tempo" DataTable="[dtYahooNews]" DisplayName="Build datatable dtYahooNews" sap:VirtualizedContainerService.HintSize="555,91" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Tema&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Fonte&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Titulo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Resumo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Tempo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:BuildDataTable>
+            <uix:NGetText DisplayName="Get text textStories" sap:VirtualizedContainerService.HintSize="555,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="3f147b01-43d6-4204-a556-b418ffee44df" TextString="[textStories]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://news.yahoo.com/" DesignTimeRectangle="51, -2552, 932, 5988" DesignTimeScaleFactor="1" FriendlyName="'Stories for'" FullSelectorArgument="&lt;webctrl id='module-stream' tag='DIV' parentid='Main' /&gt;" FuzzySelectorArgument="&lt;webctrl id='module-stream' tag='DIV' parentid='Main' type='' class='wafer-rapid-module Py(10px) wafer-rapid-tracked' aaname='' /&gt;" Guid="69f4c69b-480f-4661-9d7d-15ece03dcbab" ImageBase64="" InformativeScreenshot="c92a9b0eb4fdba612cc49875ed390c79.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*Yahoo News*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="65, 328, 112, 18" CvTextArgument="Stories for you" CvType="Text" DesignTimeRectangle="67, -2536, 110, 21" ElementType="Text" FriendlyName="'Stories for you'" FullSelectorArgument="&lt;webctrl parentid='module-stream' tag='H2' aaname='Stories for you ' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='module-stream' tag='H2' aaname='Stories for you ' type='' class='Fw(600) Fz(16px) C(--batcave) M(0)' check:text='Stories for you' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <Assign sap2010:Annotation.AnnotationText="Essa expressão usa expressão regular para encontrar todas as palavras que são seguidas por um caractere &quot;·&quot; na string textStories. Em seguida, filtra as strings para remover aquelas que estão vazias ou contêm a palavra &quot;Ad&quot;, colocando os primeiros resultados em um array." DisplayName="Assign newsThemes" sap:VirtualizedContainerService.HintSize="555,155" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[newsThemes]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]" xml:space="preserve">[System.Text.RegularExpressions.Regex.Matches(textStories, "[A-Za-z]*(?=·)").
+Select(Function(x) x.Value.Trim).
+Where(Function(x) Not String.IsNullOrEmpty(x) AndAlso Not x.Contains("Ad")).
+Take(quantityNews).ToArray]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <Assign sap2010:Annotation.AnnotationText="Essa expressão usa expressão regular para dividir a string textStories em partes com base em palavras seguidas por um caractere &quot;·&quot;. Em seguida, ela filtra as partes para incluir apenas aquelas que contêm a frase &quot;Thanks for your feedback!&quot;." DisplayName="Assign textNewsComplet" sap:VirtualizedContainerService.HintSize="555,155" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[textNewsComplet]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]" xml:space="preserve">[System.Text.RegularExpressions.Regex.Split(textStories, "[A-Za-z]*·").
+Where(Function(x) x.Contains("Thanks for your feedback!")).
+Take(quantityNews).ToArray]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <Assign sap2010:Annotation.AnnotationText="Essa expressão divide cada string em textNewsComplet em partes com base em um número seguido de &quot; min read&quot;. Em seguida, ela seleciona a primeira parte resultante desse processo e a divide novamente com base em &quot;You might also like&quot;, pegando apenas a primeira parte.&#xA;&#xA;Depois, ela substitui espaços em branco na parte resultante por um único espaço e seleciona as primeiras partes resultantes desse processamento." DisplayName="Assign textDescription" sap:VirtualizedContainerService.HintSize="555,200" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[textDescription]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]" xml:space="preserve">[(From x In textNewsComplet
+	Let dado = System.Text.RegularExpressions.Regex.Split(x, "\d+(?=\smin\sread)").First.Split("You might also like").First
+	Select System.Text.RegularExpressions.Regex.Replace(dado, "\s", " ")
+).Take(quantityNews).ToArray]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For each enumerable quantityNews" sap:VirtualizedContainerService.HintSize="555,1422" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(0, quantityNews)]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:Int32">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="521,1236" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Int32" Name="selectorIndex" />
+                      <Variable x:TypeArguments="x:String" Name="title" />
+                      <Variable x:TypeArguments="x:String" Name="source" />
+                      <Variable x:TypeArguments="x:String" Name="readingTime" />
+                      <Variable x:TypeArguments="x:String" Name="summary" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap2010:Annotation.AnnotationText="A variável selectorIndex será usada como seletor para clicar no título atual." DisplayName="Assign selectorIndex" sap:VirtualizedContainerService.HintSize="479,113" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[selectorIndex]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[currentItem+1]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click the title of the selectorIndex" sap:VirtualizedContainerService.HintSize="479,157" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3f147b01-43d6-4204-a556-b418ffee44df" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://news.yahoo.com/" DesignTimeRectangle="51, 269, 932, 142" DesignTimeScaleFactor="1" FriendlyName="'U'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='module-stream' tag='U' isleaf='1' idx='{0}' /&gt;&quot;, selectorIndex)]" FuzzySelectorArgument="&lt;webctrl parentid='module-stream' tag='U' isleaf='1' type='' class='StretchedBox' aaname='' /&gt;" Guid="79945aa8-0af7-42f6-8948-8dc9a4cbb993" ImageBase64="" InformativeScreenshot="520d97f719316b6ef5354d145d454368.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*Yahoo News*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NGetText DisplayName="Get text title" sap:VirtualizedContainerService.HintSize="479,157" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="3f147b01-43d6-4204-a556-b418ffee44df" TextString="[title]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://news.yahoo.com/malaysia-airlines-flight-mystery-former-090002907.html" DesignTimeRectangle="115, 507, 966, 80" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Democrats walk'" FullSelectorArgument="&lt;webctrl tag='H1' isleaf='1' parentclass='caas-title-wrapper' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' isleaf='1' parentclass='caas-title-wrapper' type='' class='' /&gt;" Guid="cb1edd3c-f643-463e-b427-fddf9b479c32" ImageBase64="" InformativeScreenshot="64123e936c39feee54670701c64ec9dc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://news.yahoo.com/*.html' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="115, 610, 124, 17" ElementType="Text" FriendlyName="'BRUCE SCHREINER'" FullSelectorArgument="&lt;webctrl class='caas-author-byline-collapse' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='caas-author-byline-collapse' tag='SPAN' type='' aaname='BRUCE SCHREINER' check:innerText='BRUCE SCHREINER' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <ui:MultipleAssign DisplayName="Multiple assign source, readingTime and summary" sap:VirtualizedContainerService.HintSize="479,178" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[source]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Split(textDescription(currentItem), title).First]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[readingTime]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(String.IsNullOrEmpty(System.Text.RegularExpressions.Regex.Match(textNewsComplet(currentItem), "\d+(?=\smin\sread)").Value.Trim),
+	"Tempo de leitura não especificado",
+	System.Text.RegularExpressions.Regex.Match(textNewsComplet(currentItem), "\d+(?=\smin\sread)").Value
+)]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[summary]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Split(textDescription(currentItem), title).Last]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click return" sap:VirtualizedContainerService.HintSize="479,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3f147b01-43d6-4204-a556-b418ffee44df" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="8, 54, 39, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Anterior'" FullSelectorArgument="&lt;ctrl name='*' role='pane' /&gt;&lt;ctrl name='Anterior' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Malaysia Airlines flight mystery: Former NTSB investigator intro*' role='pane' /&gt;&lt;ctrl name='Anterior' role='push button' automationid='' check:text='Anterior' /&gt;" Guid="23a75e72-3309-4070-996e-0ac572daeac8" ImageBase64="" InformativeScreenshot="68c494d0baadf4a21dfbf05913a776b9.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&#xA;    newsThemes(currentItem),&#xA;    source,&#xA;    title,&#xA;    summary,&#xA;    readingTime&#xA;}]" DataTable="[dtYahooNews]" DisplayName="Add data row in dtYahooNews" sap:VirtualizedContainerService.HintSize="479,186" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtYahooNews]" DisplayName="Write range workbook dtYahooNews" sap:VirtualizedContainerService.HintSize="555,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[sheetName]" WorkbookPath="[filePath]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJdSURBVFhHY0hgvPR/IPGoA0YdMHwdUKN36/+TK99R8Lq6FxjqaOaAY0ve/UcHzZZ3MNTRxAEF0tf+//71D2otBDw49w2rWpo4YEvHK6i1CDAz5hFWtVR3QBr35f9f3v2BWgsB757++p/Mil09VgfcPvYFqhUCDs55i6FmfcMLqCwE3DnxFSy+OOcpVAQBVlU8x9APw1gdMCXkAVQrBPz4+vd/psAVuHwSyyWwr5DBtIiH/xOZLv1/cfsHVAQCfnz5+z9L8CqK+cgYqwMSmS/9f33/J9QICFia/xQuj+7Ad09+gR01MQBVHAT2THmDYjY6xpkGlhagBuWz69/hctf2fYaKQsDqSkgQ3ziEGnV///77X6ZyA64PG8bpgAzeK/+/fURNTB2Od/9Xat6E8iDg57e//7OFr/5P5bwMDn5kfGAWZtpBxzgdAMLbe1Cz06nVH/7vnvQayoMAZEtAjk5hv4xiBiGM1wFFctf///mNKFBA7G+fUEOlSvvm/xyRq/8v7fj0/9+/f2A1IEdiMw8bxusAED6x4j3UKkxwedcnsJojCzGL3emRDzHMwoYJOqDR7DbUSEzQ530frObJ1e9QEQTY2IRZ8WDDBB0AwreOoKZuEHh+8wdcfs/UN1BRCABFRYs1ZsWDDRPlgMlBmPl7UfYTuDyo+N077c3/Nw9//n94/hu4UELWjw8T5YB+n/tQayHg64c//9N5ECUjJZgoB6AXPKDsiU0dOZigA2oNbkGthYC/f/79L1a4jlUtOZigA44uQs1ip9d+wKqOXExUFNASjzpg1AED7IBL/wEEb/bMxqNS/AAAAABJRU5ErkJggg==" InformativeScreenshot="0f2f64cb4b587b5a0782c495e47755d5.jpg" Selector="&lt;html app='chrome.exe' title='*Yahoo News*' /&gt;" Title="Yahoo News: Latest and Breaking News, Headlines, Live Updates, and More" Url="[urlYahooNews]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
